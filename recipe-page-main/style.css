@@ -1,0 +1,197 @@
+:root {
+    --white: #fff;
+        --stone-100: hsl(30, 54%, 90%);
+        --stone-600: hsl(30, 10%, 34%);
+        --stone-900: hsl(24, 5%, 18%);
+        --brown-800: hsl(14, 45%, 36%);
+        --rose-800: hsl(332, 51%, 32%);
+        --rose-50: hsl(330, 100%, 98%);
+
+        --ff-outfit: "Outfit", sans-serif;
+        --ff-young: "Young Serif", serif;
+
+        --fw-regular: 400;
+        --fw-bold: 700;
+}
+body{
+    background-color: var(--stone-100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-main{
+    margin-top: 80px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 600px;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items:flex-start
+}
+.container-main img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+h1{
+    font-family: var(--ff-young);
+    font-weight: var(--fw-regular);
+    font-style: normal;
+    margin-bottom: 0;
+}
+p{
+    font-family: var(--ff-outfit);
+    font-weight: var(--fw-regular);
+    font-size: 15px;
+    color: var(--stone-600);
+}
+.pink-box{
+    background-color: var(--rose-50);
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+h2{
+    color: var(--rose-800);
+    font-family: var(--ff-outfit);
+    font-weight:var(--fw-bold);
+    margin-left: 25px;
+}
+ul{
+    display: block;
+    list-style-type:disc;
+     margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; 
+    /* margin: 1em 0 1em 0; */
+   padding-inline-start: 40px;
+   unicode-bidi: isolate;
+}
+.list-pink li{
+    list-style: none;
+    position: relative;
+    font-family: var(--ff-outfit);
+    font-weight: var(--fw-regular);
+    font-size: 15px;
+    color: var(--stone-600);
+    margin: 10px;
+}
+.list-pink li::before{
+    content: '•';
+    display: inline-block;
+    color: var(--rose-800);
+    padding-right: 15px;
+    font-weight: var(--fw-bold);
+}
+
+.tittle-h2{
+    color: var(--brown-800);
+    font-family: var(--ff-young);
+    font-weight: var(--fw-regular);   
+    font-size: 20px;
+    margin-top: 15px;
+}
+.ıngredients{
+    border-bottom: 0.5px solid var(--stone-600);
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 0;
+}
+.ıngredients li{
+    list-style: none;
+    position: relative;
+    font-family: var(--ff-outfit);
+    font-weight: var(--fw-regular);  
+    font-size: 15px;
+    color: var(--stone-600);
+    margin-bottom: 10px;
+}
+.ıngredients li::before{
+    content: '•';
+    display: inline-block;
+    color: var(--rose-800);
+    padding-right: 15px;
+    font-weight: var(--fw-bold);
+}
+.ınstructions{
+    padding-left: 10px;
+    counter-reset: step-counter;
+    border-bottom: 0.5px solid var(--stone-600);
+    margin-bottom: 25px;
+    width: 100%;
+}
+ol{
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; 
+   padding-inline-start: 40px;
+   unicode-bidi: isolate;
+
+}
+.ınstructions li{
+    list-style: none;
+    position: relative;
+    font-family: var(--ff-outfit);
+    font-weight: var(--fw-regular);
+    font-size:15px;  
+    color: var(--stone-600);
+    margin-bottom: 10px;
+}
+.ınstructions li::before{
+    counter-increment: step-counter;
+    content:counter(step-counter)'.';
+    display: inline-block;
+    color: var(--rose-800);
+    padding-right: 15px;
+    font-weight: var(--fw-bold);
+}
+.table{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    width: 100%;
+}
+.item1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: var(--ff-outfit);
+    font-size: 15px;
+    color: var(--stone-600);
+    font-weight: var(--fw-bold);
+}
+.item1 > div,
+.item2 > div{
+    border-bottom: 0.5px solid var(--stone-600);
+    padding: 10px 0;
+  
+}
+.item2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: var(--ff-outfit);
+    font-size: 15px;
+    color: var(--rose-800);
+    font-weight: var(--fw-bold);
+}
+footer{
+    color:  hsl(36, 2%, 51%);
+     font-family: "Outfit", sans-serif;
+     font-size: 10px;
+ 
+ }
+ @media (max-width:600px){
+    .container-main{
+        width: 90%;
+    }
+ }
